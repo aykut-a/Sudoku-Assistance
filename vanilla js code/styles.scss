@@ -1,0 +1,298 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --blue : #114B5F;
+  --green : #32533D;
+  --burgundy: #890620;
+  --fadedblue:  #114c5f6b;
+  --fadedburgundy: #89062057;
+  --vfadedburgundy: #8906201c;
+}
+
+body{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction: column;
+  height:99vh;
+}
+
+button{
+  cursor:pointer;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 200ms;
+}
+
+.overlay{
+  display:none;
+  height:100vh;
+  width:100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  align-items: center;
+  justify-content:center;
+}
+
+.tutorial{
+  background-color:white;
+  width: 600px;
+  height:400px;
+  box-shadow: 0 0 10px 0 black;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  display:none;
+
+  span{
+    font-weight: bold;
+  }
+
+  p.enjoy-p{
+    width:100%;
+    text-align:center;
+    font-size:2rem;
+  }
+  button{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius:10px;
+    border: none;
+  }
+  button:hover{
+    background-color: var(--burgundy);
+    color: white;
+  }
+}
+
+header{
+  background-color: var(--green);
+  width: 100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  height:4rem;
+
+  button{
+    padding: 5px 10px;
+    font-size:1rem;
+    border: none;
+    font-weight:600;
+    border-radius:10px;
+  }
+
+  button:hover{
+    background-color:var(--burgundy);
+    color: white;
+  }
+
+  button + button {
+    margin-left: 1rem;
+  }
+
+  i{
+    color: white;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+}
+
+.self-try{
+  padding: 5px 10px;
+  background-color: var(--fadedburgundy);
+}
+
+.self-try:hover{
+  background-color: var(--burgundy);
+  color: white;
+}
+
+// The console on the left hoeny, with the dummy nummers 
+
+.nummer{
+  justify-content:space-around;
+  align-items: center;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-radius:10px;
+  width:540px;
+
+  background-color: #114c5f80;
+
+  button{
+    border-radius:10px;
+    border: none;
+    width:2rem;
+    height:2rem;
+    font-size:1rem;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-color: var(--blue);
+    color:white;
+  }
+
+  button.empty-button{
+    width:min-content;
+    padding: 5px 10px;
+    font-size:14px;
+  }
+
+  button.empty-button:hover{
+    background-color: var(--burgundy);
+    color: white;
+  }
+
+
+
+
+}
+
+.grid{
+  width:540px;
+  height:540px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+
+// Seperators here 
+.vseperator{
+  width:3px;
+  height:540px;
+  position: absolute;
+  background-color: black; 
+}
+
+.hseperator{
+  height:2px;
+  width:540px;
+  position: absolute;
+  background-color: black; 
+}
+
+.s1{
+  left: 33.33%;
+}
+
+.s2{
+  left: 66.3%;
+}
+
+.s3{
+  top: 33.33%;
+}
+
+.s4{
+  top: 66.3%;
+}
+
+.square{
+  border: 1px solid gray;
+  width:60px;
+  height: 60px;
+  cursor: pointer;
+  display:flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  font-size: 2.5rem;
+
+  transition:background-color 500ms;
+}
+
+.minisquare{
+  width:33.3%;
+  height:33.3%;
+  background-color: var(--vfadedburgundy);
+  font-size: 12px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+
+  display:none; // play with this tho
+}
+
+
+@keyframes checkingPossibilities{
+  0%{
+    background-color: var(--fadedburgundy);
+  }
+
+  100%{
+    background-color: 'white';
+  }
+}
+
+@keyframes red-pulse{
+  0%{
+    outline: 1px solid var(--burgundy);
+  }
+  100%{
+    outline: 15px solid transparent;
+  }
+}
+
+@keyframes blue-pulse{
+  0%{
+    outline: 1px solid var(--blue);
+  }
+  100%{
+    outline: 15px solid transparent;
+  }
+}
+
+
+// Media Queries 
+
+@media (max-width: 600px){ // 600'e kadar pek sorun yok, direk telefona uygun yap kalanını da zaten kolay 
+  .grid{
+    width:360px;
+    height:360px;
+  }
+  header{
+  width:100%;
+  padding:10px 20px;
+  }
+  .vseperator{
+    width:3px;
+    height:360px;
+  }
+  .hseperator{
+    height:2px;
+    width:360px;
+  }
+  .nummer{
+    width:360px;
+    .empty-button{
+      margin-top: 1rem;
+    }
+  }
+  .square{
+    width:40px;
+    height: 40px;
+    font-size:1.5rem;
+  }
+
+  .tutorial{
+    height:100%;
+  }
+
+}

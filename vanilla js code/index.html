@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Sudoku Solver</title>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="overlay" overlay></div>
+
+  <header>
+    <button class="solve-button" solve-button>Solve It</button>
+    <button title="Clean Grid" clean-button>Clean All</button>
+    <button show-possibilities-button>Show Possibilities</button>
+    <i title="Tutorial" class="material-icons" information>info_outline</i>
+  </header>
+
+  <button class="self-try" self-try>I'll do the rest</button>
+
+  <div class="nummer">
+    <button integer>1</button>
+    <button integer>2</button>
+    <button integer>3</button>
+    <button integer>4</button>
+    <button integer>5</button>
+    <button integer>6</button>
+    <button integer>7</button>
+    <button integer>8</button>
+    <button integer>9</button>
+    <button title="Empty Square" class="empty-button" empty-square-button>EMPTY</button>
+  </div>
+
+  <div class="grid">
+    <div class="vseperator s1" s1></div>
+    <div class="vseperator s2" s2></div>
+    <div class="hseperator s3" s3></div>
+    <div class="hseperator s4" s4></div>
+  </div>
+
+  <div class="tutorial" tutorial>
+    <button hide-info>Close</button>
+    <p>Welcome to the Sudoku Solver, you can let the solver try to solve it for you, if it fails to do so <span>please
+        click the I'll do the rest button</span>.</p>
+    <p>Or you have the chance to the just enter the given inputs and start solving it by yourself, with the <span>help
+        of the solver</span> warning you a given integer won't go in the place, if you were to make a false entry.</p>
+    <p>In order the assign a new integer to a already filled square, you must <span>empty it first.</span></p>
+    <p>You can click <span>show possibilities</span> button to see what is happening in the background.</p>
+    <p class="enjoy-p">ENJOY!</p>
+  </div>
+
+
+</body>
+
+</html>

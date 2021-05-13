@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --blue: #114B5F;
+  --green: #32533D;
+  --burgundy: #890620;
+  --fadedblue:  #114c5f6b;
+  --fadedburgundy: #89062057;
+  --vfadedburgundy: #8906201c;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 99vh;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+
+.overlay {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tutorial {
+  background-color: white;
+  width: 600px;
+  height: 400px;
+  -webkit-box-shadow: 0 0 10px 0 black;
+          box-shadow: 0 0 10px 0 black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  display: none;
+}
+
+.tutorial span {
+  font-weight: bold;
+}
+
+.tutorial p.enjoy-p {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tutorial button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+}
+
+.tutorial button:hover {
+  background-color: var(--burgundy);
+  color: white;
+}
+
+header {
+  background-color: var(--green);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4rem;
+}
+
+header button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+header button:hover {
+  background-color: var(--burgundy);
+  color: white;
+}
+
+header button + button {
+  margin-left: 1rem;
+}
+
+header i {
+  color: white;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.self-try {
+  padding: 5px 10px;
+  background-color: var(--fadedburgundy);
+}
+
+.self-try:hover {
+  background-color: var(--burgundy);
+  color: white;
+}
+
+.nummer {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 540px;
+  background-color: #114c5f80;
+}
+
+.nummer button {
+  border-radius: 10px;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nummer button:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.nummer button.empty-button {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.nummer button.empty-button:hover {
+  background-color: var(--burgundy);
+  color: white;
+}
+
+.grid {
+  width: 540px;
+  height: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.vseperator {
+  width: 3px;
+  height: 540px;
+  position: absolute;
+  background-color: black;
+}
+
+.hseperator {
+  height: 2px;
+  width: 540px;
+  position: absolute;
+  background-color: black;
+}
+
+.s1 {
+  left: 33.33%;
+}
+
+.s2 {
+  left: 66.3%;
+}
+
+.s3 {
+  top: 33.33%;
+}
+
+.s4 {
+  top: 66.3%;
+}
+
+.square {
+  border: 1px solid gray;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  font-size: 2.5rem;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.minisquare {
+  width: 33.3%;
+  height: 33.3%;
+  background-color: var(--vfadedburgundy);
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+@-webkit-keyframes checkingPossibilities {
+  0% {
+    background-color: var(--fadedburgundy);
+  }
+  100% {
+    background-color: 'white';
+  }
+}
+
+@keyframes checkingPossibilities {
+  0% {
+    background-color: var(--fadedburgundy);
+  }
+  100% {
+    background-color: 'white';
+  }
+}
+
+@-webkit-keyframes red-pulse {
+  0% {
+    outline: 1px solid var(--burgundy);
+  }
+  100% {
+    outline: 15px solid transparent;
+  }
+}
+
+@keyframes red-pulse {
+  0% {
+    outline: 1px solid var(--burgundy);
+  }
+  100% {
+    outline: 15px solid transparent;
+  }
+}
+
+@-webkit-keyframes blue-pulse {
+  0% {
+    outline: 1px solid var(--blue);
+  }
+  100% {
+    outline: 15px solid transparent;
+  }
+}
+
+@keyframes blue-pulse {
+  0% {
+    outline: 1px solid var(--blue);
+  }
+  100% {
+    outline: 15px solid transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 360px;
+    height: 360px;
+  }
+  header {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .vseperator {
+    width: 3px;
+    height: 360px;
+  }
+  .hseperator {
+    height: 2px;
+    width: 360px;
+  }
+  .nummer {
+    width: 360px;
+  }
+  .nummer .empty-button {
+    margin-top: 1rem;
+  }
+  .square {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  .tutorial {
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
